@@ -1,0 +1,33 @@
+{
+  "name": "moshjd-automation",
+  "version": "2023 Mosh JD. All Rights Reserved",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "node cypress_runner.js"
+  },
+  "cypress": {
+    "baseUrl": "https://app-qa.moshjd.com/user/login",
+    "defaultCommandTimeout": 9000,
+    "pageLoadTimeout": 9000
+  },
+  "devDependencies": {
+    "cypress": "^13.13.2",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.7.0",
+    "cypress-xpath": "^2.0.1"
+  },
+  "integrationFolder": "cypress/e2e/tests",
+  "reporter": "cypress-mochawesome-reporter",
+  "reporterOptions": {
+    "reportDir": "cypress/reports",
+    "configFile": "package.json",
+    "charts": true,
+    "reportPageTitle": "MoshJD Automate Tests Results",
+    "overwrite": false,
+    "html": false,
+    "json": true,
+    "timestamp": "YYYYMMDD_HHmmss",
+    "inlineAssets": true
+  },
+  "video": false
+}
